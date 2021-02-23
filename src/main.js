@@ -1,7 +1,11 @@
 import Vue from 'vue'
 import App from './App.vue'
 
-Vue.config.productionTip = false
+import TemplateOne from './components/TemplateOne.vue';
+import InfoBlock from './components/InfoBlock.vue';
+
+Vue.component('a4-page', TemplateOne);
+Vue.component('info-block', InfoBlock);
 
 new Vue({
   render: h => h(App),
