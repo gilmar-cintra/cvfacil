@@ -10,19 +10,23 @@
         </div>
 
         <div class="name">
-            {{ firstName }}<br>
-            {{ lastName}}
+          {{ firstName }}<br />
+          {{ lastName }}
         </div>
 
         <div class="jobTitle">
-            {{ jobTitle }}
-
+          {{ jobTitle }}
         </div>
 
-        <info-block title="Sobre" :text="about"></info-block>
-         <info-block title="Sobre" :text="about"></info-block>
-          <info-block title="Sobre" :text="about"></info-block>
+        <info-block title="Objetivo" :text="about"></info-block>
+        <info-block title="Contato" :contact="contact"></info-block>
+        <info-block title="Habilidades" :skills="skills"></info-block>
+         <info-block title="Idiomas" :languages="laguages"></info-block>
+
+      
        
+
+
       </div>
       <div class="secondInfo"></div>
     </page>
@@ -30,7 +34,7 @@
 </template>
 
 <script>
-import InfoBlock from './InfoBlock.vue';
+import InfoBlock from "./InfoBlock.vue";
 export default {
   components: { InfoBlock },
   data() {
@@ -39,17 +43,41 @@ export default {
       lastName: "Silva",
       photoLink: "https://www.w3schools.com/howto/img_avatar.png",
       jobTitle: "Desenvolvedor",
-about: "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout."
-};
+      about:
+        "Busco oportunidades de desenvolver-me profissionalmente e fazer a diferença na equipe.",
+        contact: {
+          address: "Rua Gregório Pomar, 213 E Viela Sabiá n.º 19 Jardim Damasceno - São Paulo / SP - CEP 02879-050",
+          phones: [
+            "+55 11 91234-1234",
+            "+55 11 98765-4321"
+          ],
+          emails:[
+            "r.sale.rodrigues@gmail.com",
+            "marcio.farias@hotmail.com"
+          ]
+        },
+        teste: {
+          "Gilmar": 2,
+          "Cintra": 3
+        },
+        skills: {
+            "HTML & CSS": 3,
+            "MySQL & SQL": 2,
+            "PHP & Laravel": 3,
+            "JQuery & TypeScript":5,
+            "Microsoft Office": 4
+        },
+        laguages: {
+          "Português": 3,
+          "English": 4,
+          "Espanhol": 2
+        }
+    };
   },
 };
 </script>
 
 <style>
-
-
-
-
 body {
   background: rgb(204, 204, 204);
 }
@@ -103,21 +131,17 @@ body {
   text-align: center;
   font-family: "Bebas", Helvetica, Arial;
   padding-top: 15px;
-letter-spacing: 13px;
-
-
+  letter-spacing: 13px;
 }
 
 .jobTitle {
-    
-font-family: "MyriadPro", Helvetica, Arial;
-font-size: 12pt;
-text-align: center;
-text-transform: uppercase;
-letter-spacing: 3px;
-color:#414142;
-margin-top: 10px;
-
+  font-family: "MyriadPro", Helvetica, Arial;
+  font-size: 12pt;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: #414142;
+  margin-top: 10px;
 }
 
 page {

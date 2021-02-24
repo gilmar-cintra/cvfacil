@@ -22,3 +22,12 @@ npm run lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+
+
+
+
+ <div v-if="laguages">
+        teste
+        <stars :skills="laguages"></stars>
+      </div>
