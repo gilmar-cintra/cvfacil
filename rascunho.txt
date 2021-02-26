@@ -1,0 +1,17 @@
+   <div class="left">
+        <span class="title">
+            {{ experience.title }}
+        </span>
+        <br>
+        <span class="period">
+            {{experience.startDate}} - {{ experience.endDate}}
+        </span>
+      </div>
+      <div class="right">
+        <span class="title">
+            {{ experience.entity }}
+        </span> <br>
+        <span class="text">
+            {{experience.description }}
+        </span>
+      </div>
